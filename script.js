@@ -10,11 +10,27 @@ function parentFunction(){
     }
 }
 
-parentFunction()
-let result = parentFunction()
-result();
-result();
-result();
+// parentFunction()
+// let result = parentFunction()
+// result();
+// result();
+// result();
 
+// Instantly Invoked Function Expression (IIFE)
 //anonymous function
-const johnDoe = ()=>{}
+carID = 1
+const johnDoe = (()=>{
+    carID++
+    console.log("outer", carID);
+    return ()=> {
+        carID++
+        console.log("inner", carID);
+    }
+})();
+
+johnDoe();
+
+// let closure = johnDoe();
+// or
+// johnDoe();
+// or add one (or more) empty parentheses to line 28, matching how many functions
