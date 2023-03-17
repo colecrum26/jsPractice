@@ -1,3 +1,4 @@
+// higher order function
 myValue = 1;
 
 function parentFunction(){
@@ -14,3 +15,6 @@ let result = parentFunction()
 result();
 result();
 result();
+
+//anonymous function
+const johnDoe = ()=>{}
