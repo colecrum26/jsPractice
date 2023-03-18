@@ -4,10 +4,10 @@ function updateLight(current) {
     return "yellow";
   } else if ((current = "yellow")) {
     return "red";
-  } else {
+  } else if (current = "red"){
     return "green";
   }
 }
 
 updateLight("yellow");
-console.log(updateLight)
+console.log(current);
