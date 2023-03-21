@@ -1,7 +1,7 @@
 "use strict";
 let countTo;
 
-class UserInputError extends Error {}
+class UserInputError extends Error {} // all methods in Error class are made available to UserInputError class
 
 function takeUserInput() {
   try {
@@ -10,9 +10,9 @@ function takeUserInput() {
     if (!countTo) {
       throw new UserInputError("Not a valid number");
     }
-  } catch (e) {
-    if (e instanceof UserInputError) {
-      alert(e.message);
+  } catch (err) {
+    if (err instanceof UserInputError) {
+      alert(err.message);
       takeUserInput();
     } else {
       alert("An unexpected error occured");
