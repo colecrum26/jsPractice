@@ -24,7 +24,7 @@ const server = createServer((req, res) => {
         console.log(chunks);
     })
     req.on('end', () => {
-        if (url === 'movie_likes' && method === 'POST'){
+        if (url === '/movie_likes' && method === 'POST'){
             const body = JSON.parse(Buffer.concat(chunks).toString());
             const newMovie = `${body.username}, ${body.movie}\n`;
             MovieRecc.emit('new movie!', newMovie, res);
@@ -33,7 +33,7 @@ const server = createServer((req, res) => {
                 JSON.stringify({ msg: 'Successfully added movie!' })
             );
             res.end();
-        } else if (url === 'movie_likes' && method === 'GET'){
+        } else if (url === '/movie_likes' && method === 'GET'){
             res.setHeader('content-type', 'text/html');
             const readStream = createReadStream(
                 path.join(__dirname, './public/index.html')
