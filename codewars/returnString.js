@@ -1,5 +1,3 @@
-let name = "Frannie";
+let hungerFor = ["knowledge", "collaboration", "agility"];
 
-function greet(name) {
-    return name ? "Hello" + name : "No name";
-};
+console.log(hungerFor);
