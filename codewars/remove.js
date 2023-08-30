@@ -1,8 +1,13 @@
-let s = "Hello World!";
-let s1 = "fUFFwiPZkI!HeZwvOnTvV uitwfoIYSw!vHScOiWOgl"
+let arr = ['Hello', 'Goodbye', 'Hello Again']
 
-function removeExclamationMarks(s) {
-    return s.replaceAll("!", "");
+function removeEveryOther(arr){
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 == 0) {
+      console.log(i);
+      let res = arr.slice(0);
+      return res;
+    }
   }
+}
 
-console.log(removeExclamationMarks(s1));
+console.log(removeEveryOther(arr));
