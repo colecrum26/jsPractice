@@ -1,8 +1,7 @@
 let number = -32;
 
 function sumDigits(number) {
-    let numArr = String(number).split('').map(Number);
-    console.log(numArr);
+    let numArr = Math.abs(number).toString().split('').map(Number);
     return numArr.reduce((a, b) => a + b, 0);
   }
 
